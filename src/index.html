@@ -4,18 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport"
           content="height=600, width=300, initial-scale=1.0">
+    <meta name="author" content="Piryushov:uchenik.ikt@yandex.ru">
     <meta name="description" content="Website with a banner for making orders with gamification elements">
     <meta name="keywords" content="yandex, market, gamification, order">
     <meta name="robots" content="index, follow">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" type="image/png" href="assets/images/favicons/apple-touch-icon.png">
+    <link rel="manifest" crossorigin="use-credentials" href="manifest.json">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/css-reset.css">
+    <script type="text/javascript" defer src="js/loading-scripts.js"></script>
     <title>Yandex Crowd System</title>
 </head>
 <body>
     <div id="root">
         <main>
-
+            <aside class="gamified-banner__container">
+                <div class="gamified-banner__shop-window">
+                    <div class="shop-window__products" data-shopWindowProducts></div>
+                    <img class="shop-window__background" src="assets/images/svg/shop-window.svg" alt="Shop window"/>
+                </div>
+                <div class="gamified-banner__basket" data-basket>
+                    <img data-basket class="basket__image" src="assets/images/svg/basket.svg" alt="Basket"/>
+                </div>
+                <button id="pay_basket" class="button button__not-visible" role="link">
+                    Оплатить корзину
+                </button>
+            </aside>
         </main>
     </div>
 </body>
